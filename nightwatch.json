@@ -5,8 +5,7 @@
     "webdriver" : {
       "start_process": true,
       "host": "localhost",
-      "port":4444,
-      "javascriptEnabled": true,
+      "port":9515,
       "browserName": "chrome",
       
     "cli_args": {
@@ -16,19 +15,16 @@
           
   },
     "test_settings" : {
-  
-      "default" :{
-        "desiredCapabilities": {
-          "build" : "Quality Assurance",
-          "name" : "Nightwatch TestSuite",
-          "browserName": "chrome",
-          "javascriptEnabled":true,
-          "disable-web-security": true,
-          "ignore-certificate-errors": true,
-          "console" : true,
-          "detailed_output": true, 
-          "silent": false
+        "default" :{
+          "desiredCapabilities": {
+            "build" : "QA",
+            "name" : "Nightwatch-TestSuite",
+            "browserName": "chrome",
+
+              "chromeOptions": {
+                "args": ["--headless"]
+            }
         }
-      }  
+      }
     }
   }

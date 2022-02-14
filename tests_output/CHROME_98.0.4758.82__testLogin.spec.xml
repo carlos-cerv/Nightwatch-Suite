@@ -5,9 +5,9 @@
 
   <testsuite name="testLogin.spec"
     errors="0" failures="0" hostname="" id="" package="testLogin.spec" skipped="0"
-    tests="3" time="1.472" timestamp="">
+    tests="3" time="1.333" timestamp="">
   
-    <testcase name="Login: Login Standar User" classname="testLogin.spec" time="0.3390" assertions="3">
+    <testcase name="Login: Login Standar User" classname="testLogin.spec" time="0.1930" assertions="3">
 
     
 
@@ -16,14 +16,14 @@
     
     </testcase>
   
-    <testcase name="Login: Invalid user validation" classname="testLogin.spec" time="0.5030" assertions="2">
+    <testcase name="Login: Invalid user validation" classname="testLogin.spec" time="0.5080" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Login: Validate Standar User Access" classname="testLogin.spec" time="0.6300" assertions="2">
+    <testcase name="Login: Validate Standar User Access" classname="testLogin.spec" time="0.6320" assertions="2">
 
     
 
