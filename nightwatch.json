@@ -7,10 +7,10 @@
       "host": "localhost",
       "port":4444,
       "javascriptEnabled": true,
-      "browserName": "firefox",
+      "browserName": "chrome",
       
     "cli_args": {
-      "webdriver.gecko.driver": "bin/geckodriver",
+      "webdriver.chrome.driver": "bin/chromedriver",
       "acceptSslCerts": true
     }
           
@@ -21,18 +21,13 @@
         "desiredCapabilities": {
           "build" : "Quality Assurance",
           "name" : "Nightwatch TestSuite",
-          "browserName": "firefox",
+          "browserName": "chrome",
           "javascriptEnabled":true,
           "disable-web-security": true,
           "ignore-certificate-errors": true,
           "console" : true,
           "detailed_output": true, 
-          "silent": false,
-
-          "alwaysMatch": {
-            "moz:firefoxOptions": {
-            }
-          }
+          "silent": false
         }
       }  
     }
