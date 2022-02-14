@@ -1,0 +1,10 @@
+{
+    "userName": [
+        "standard_user",
+        "locked_out_user",
+        "problem_user",
+        "performance_glitch_user"],
+    "password": "secret_sauce",
+    "invalidUser": "invalid_user",
+    "url": "https://www.saucedemo.com/"
+}

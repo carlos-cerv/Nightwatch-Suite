@@ -1,0 +1,21 @@
+{
+  "name": "framework_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "Test:Login": "nightwatch Test/tests/testLogin.spec.js",
+    "Test:mainPage": "nightwatch Test/tests/testMainPage.spec.js"
+  },
+  "keywords": [],
+  "author": "CARLOS EDUARDO CERVANTES ARTEAGA",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "geckodriver": "^3.0.1",
+    "grunt": "^1.4.1",
+    "grunt-contrib-jshint": "^3.1.1",
+    "nightwatch": "^2.0.2"
+  }
+}

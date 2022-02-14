@@ -1,0 +1,39 @@
+{
+    "src_folders" : ["Test/steps"],
+    "page_objects_path" :[ "test/pages"],
+    
+    "webdriver" : {
+      "start_process": true,
+      "host": "localhost",
+      "port":4444,
+      "javascriptEnabled": true,
+      "browserName": "firefox",
+      
+    "cli_args": {
+      "webdriver.gecko.driver": "bin/geckodriver",
+      "acceptSslCerts": true
+    }
+          
+  },
+    "test_settings" : {
+  
+      "default" :{
+        "desiredCapabilities": {
+          "build" : "Quality Assurance",
+          "name" : "Nightwatch TestSuite",
+          "browserName": "firefox",
+          "javascriptEnabled":true,
+          "disable-web-security": true,
+          "ignore-certificate-errors": true,
+          "console" : true,
+          "detailed_output": true, 
+          "silent": false,
+
+          "alwaysMatch": {
+            "moz:firefoxOptions": {
+            }
+          }
+        }
+      }  
+    }
+  }
