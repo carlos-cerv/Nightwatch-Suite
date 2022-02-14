@@ -10,4 +10,4 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - xvfb-run npm install
 script:
-  - xvfb-run npm run Test:Login
+  - xvfb-run Test:Login
