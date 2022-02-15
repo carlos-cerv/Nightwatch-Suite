@@ -16,14 +16,19 @@
   },
     "test_settings" : {
         "default" :{
-          "desiredCapabilities": {
-            "build" : "QA",
-            "name" : "Nightwatch-TestSuite",
-            "browserName": "chrome",
+          "enabled": true,
+          "on_failure": true,
+          "on_error": true,
+          "path": "tests_output/screenshots",
 
-              "chromeOptions": {
-                "args": ["--headless"]
-            }
+            "desiredCapabilities": {
+              "build" : "QA",
+              "name" : "Nightwatch-TestSuite",
+              "browserName": "chrome",
+
+                "chromeOptions": {
+                  "args": ["--headless"]
+              }
         }
       }
     }
