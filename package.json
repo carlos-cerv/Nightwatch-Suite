@@ -7,7 +7,7 @@
     "Test:mainPage": "nightwatch Test/tests/testMainPage.spec.js"
   },
   "keywords": [],
-  "author": "CARLOS EDUARDO CERVANTES ARTEAGA",
+  "author": "Carlos Cervantes",
   "license": "ISC",
   "dependencies": {
     "path": "^0.12.7"
