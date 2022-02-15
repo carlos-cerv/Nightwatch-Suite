@@ -22,13 +22,10 @@
           "path": "tests_output/screenshots",
 
             "desiredCapabilities": {
-              "build" : "QA",
-              "name" : "Nightwatch-TestSuite",
               "browserName": "chrome",
-
-                "chromeOptions": {
-                  "args": ["--headless"]
-              }
+              "chromeOptions" : {
+                "args" : ["headless", "no-sandbox", "disable-gpu"]
+          }  
         }
       }
     }
