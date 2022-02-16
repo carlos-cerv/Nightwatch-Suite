@@ -7,9 +7,9 @@ dist: trusty
 addons:
   chrome: stable
 before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - npm install
   - npm install nightwatch --save-dev
   - npm install chromedriver --save-dev
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script:
   - xvfb-run npm run Test:Login

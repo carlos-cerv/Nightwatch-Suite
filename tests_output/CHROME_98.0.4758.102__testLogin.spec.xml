@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="testLogin.spec"
+    errors="0" failures="0" hostname="" id="" package="testLogin.spec" skipped="0"
+    tests="3" time="1.324" timestamp="">
+  
+    <testcase name="Login: Login Standar User" classname="testLogin.spec" time="0.1860" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Login: Invalid user validation" classname="testLogin.spec" time="0.4920" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Login: Validate Standar User Access" classname="testLogin.spec" time="0.6460" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

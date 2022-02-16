@@ -3,14 +3,16 @@ const dataTest = require('../data/testData.json');
                                  
 module.exports = function (browser) {
     const loginPage = browser.page.loginPage();
-    const mainPage = browser.page.mainPage();
-    //USE FUNCTIONS
+        //USE FUNCTIONS
         this.loginUser = async () => {
             await loginPage.click('@username')
             await loginPage.setValue('@username', usersTest.userName[0])
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
+        };
+        //SUCCESS LOGIN
+        this.loginSuccess = async () =>{
             await loginPage.assert.visible('@mainPageView')
             await loginPage.assert.containsText('@mainPageView',dataTest.ProductsText)
         };
