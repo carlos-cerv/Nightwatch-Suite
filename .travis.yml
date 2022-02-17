@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8"
+  - "16"
 services:
   - xvfb
 dist: trusty
@@ -9,4 +9,4 @@ addons:
 before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script:
-  - npm run Test:Login
+  - xvfb-run npm run Test:Login
