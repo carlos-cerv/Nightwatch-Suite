@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "16"
+  - "8"
 services:
   - xvfb
 dist: trusty
@@ -12,4 +12,4 @@ before_install:
   - npm install nightwatch --save-dev
   - npm install chromedriver --save-dev
 script:
-  - xvfb-run npm run Test:Login
+  - npm run Test:Login
