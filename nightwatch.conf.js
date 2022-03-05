@@ -48,10 +48,18 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: '/home/runner/work/Nigthwatch-Suite/Nigthwatch-Suite/node_modules/geckodriver/geckodriver',
+        server_path: "node_modules/geckodriver/geckodriver.exe",
         port: 4444,
         host: 'localhost',
         ssl: false,
+        default_path_prefix: '',
+        proxy: undefined,
+        cli_args: {
+          args: [
+            '-headless',
+            // '-verbose'
+          ]
+        }
       }
     },
 
@@ -75,6 +83,7 @@ module.exports = {
         server_path: '',
         cli_args: [
           // very verbose geckodriver logs
+          '-headless',
           // '-vv'
         ]
       }
