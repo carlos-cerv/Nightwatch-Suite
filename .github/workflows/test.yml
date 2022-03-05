@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: "14.x"
       - run: npm install
-      - run: npm install geckodriver --save-dev
+      - run: npm install geckodriver@latest
       - run: npm ci
       - run: npm run Test:Login
