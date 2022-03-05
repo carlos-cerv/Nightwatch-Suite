@@ -52,7 +52,7 @@ module.exports = {
         port: 9515,
         host: 'localhost',
         }
-      }
+      
     },
 
     
