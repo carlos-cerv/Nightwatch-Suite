@@ -43,7 +43,7 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'chrome'
+        browserName : 'firefox'
       },
 
       webdriver: {
@@ -51,7 +51,7 @@ module.exports = {
         server_path: '',
         args: [
           '-headless',
-          // '-verbose'
+          '-verbose'
         ]
       }
     },
