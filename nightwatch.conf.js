@@ -48,11 +48,10 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: '',
-        args: [
-          '-headless',
-          '-verbose'
-        ]
+        server_path: '/home/runner/work/Nigthwatch-Suite/Nigthwatch-Suite/node_modules/geckodriver/geckodriver',
+        port: 4444,
+        host: 'localhost',
+        ssl: false,
       }
     },
 
@@ -186,7 +185,7 @@ module.exports = {
           retry_attempts: 3
         },
         keep_alive: true,
-        start_process: false
+        start_process: true
       }
     },
 
@@ -202,7 +201,7 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         chromeOptions : {
-          w3c: true
+          w3c: false
         }
       }
     },
@@ -250,10 +249,9 @@ module.exports = {
       // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
         start_process: true,
-        port: 4444,
+        port: 9515,
         host: 'localhost',
-        server_path: '/home/runner/work/Nigthwatch-Suite/Nigthwatch-Suite/node_modules/geckodriver/geckodriver',
-        //server_path: (Services.seleniumServer ? Services.seleniumServer.path : ''),
+        server_path: (Services.seleniumServer ? Services.seleniumServer.path : ''),
         cli_args: {
           'webdriver.gecko.driver': (Services.geckodriver ? Services.geckodriver.path : ''),
           'webdriver.chrome.driver': (Services.chromedriver ? Services.chromedriver.path : '')
