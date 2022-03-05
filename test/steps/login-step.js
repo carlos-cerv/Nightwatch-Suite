@@ -14,7 +14,7 @@ module.exports = function (browser) {
         //SUCCESS LOGIN
         this.loginSuccess = async () =>{
             await loginPage.assert.visible('@mainPageView')
-            await loginPage.assert.containsText('@mainPageView',dataTest.ProductsText)
+            await loginPage.assert.textContains('@mainPageView',dataTest.ProductsText)
         };
         //INVALID USER VALIDATION
         this.invalidUser = async () => {
@@ -24,7 +24,7 @@ module.exports = function (browser) {
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
             await loginPage.assert.visible('@errorLoginText')
-            await loginPage.assert.containsText('@errorLoginText', dataTest.WrongUserText)
+            await loginPage.assert.textContains('@errorLoginText', dataTest.WrongUserText)
             await this.clearFields()
         };
         //VALIDATE LOGIN FORM 
