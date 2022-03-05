@@ -57,7 +57,6 @@ module.exports = {
         cli_args: {
           args: [
             '-headless',
-            // '-verbose'
           ]
         }
       }
