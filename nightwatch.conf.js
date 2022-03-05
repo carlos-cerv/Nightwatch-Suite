@@ -43,21 +43,14 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'firefox'
+        browserName : 'chrome'
       },
 
       webdriver: {
         start_process: true,
         //server_path: "node_modules/geckodriver/geckodriver.exe",
-        port: 4444,
+        port: 9515,
         host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
-        cli_args: {
-          args: [
-            '-headless',
-          ]
         }
       }
     },
