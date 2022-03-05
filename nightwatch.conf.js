@@ -48,7 +48,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: "node_modules/geckodriver/geckodriver.exe",
+        //server_path: "node_modules/geckodriver/geckodriver.exe",
         port: 4444,
         host: 'localhost',
         ssl: false,
