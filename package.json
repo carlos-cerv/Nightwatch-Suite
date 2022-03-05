@@ -16,7 +16,7 @@
     "chromedriver": "^98.0.0",
     "dotenv": "^16.0.0",
     "geckodriver": "^3.0.1",
-    "nightwatch": "^2.0.2",
+    "nightwatch": "^2.0.10",
     "travis": "^0.1.1"
   }
 }
