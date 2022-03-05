@@ -90,9 +90,9 @@ module.exports = {
           // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
           w3c: true,
           args: [
-            //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
+            '--no-sandbox',
+            '--ignore-certificate-errors',
+            '--allow-insecure-localhost',
             '--headless'
           ]
         }
@@ -250,7 +250,7 @@ module.exports = {
       // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
         start_process: true,
-        port: 4444,
+        port: 9515,
         server_path: (Services.seleniumServer ? Services.seleniumServer.path : ''),
         cli_args: {
           'webdriver.gecko.driver': (Services.geckodriver ? Services.geckodriver.path : ''),
@@ -276,7 +276,7 @@ module.exports = {
         'moz:firefoxOptions': {
           args: [
              '-headless',
-            // '-verbose'
+             '-verbose'
           ]
         }
       }
