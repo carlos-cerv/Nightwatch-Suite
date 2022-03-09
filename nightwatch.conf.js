@@ -73,7 +73,7 @@ module.exports = {
         server_path: '',
         cli_args: [
           // very verbose geckodriver logs
-          //'-headless',
+          '-headless',
           // '-vv'
         ]
       }
@@ -97,7 +97,7 @@ module.exports = {
       },
       webdriver: {
         start_process: true,
-        server_path:'/home/runner/work/Nigthwatch-Suite/Nigthwatch-Suite/node_modules/chromedriver/lib/chromedriver/chromedriver',
+        server_path:'',
         port: 9515,
         host: 'localhost',
         ssl: false,
