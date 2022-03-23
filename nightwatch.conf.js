@@ -63,7 +63,7 @@ module.exports = {
           'moz:firefoxOptions': {
             args: [
               '-headless',
-              // '-verbose'
+              '-verbose'
             ]
           }
         }
@@ -74,7 +74,7 @@ module.exports = {
         cli_args: [
           // very verbose geckodriver logs
           '-headless',
-          // '-vv'
+          '-vv'
         ]
       }
     },
@@ -94,19 +94,6 @@ module.exports = {
             '--headless'
           ]
         }
-      },
-      webdriver: {
-        start_process: true,
-        server_path:'',
-        port: 9515,
-        host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
-        cli_args: [
-          // --verbose
-          '--headless'
-        ]
       }
     },
 
