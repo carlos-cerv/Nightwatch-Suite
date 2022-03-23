@@ -19,7 +19,6 @@
 │   ├── HTMLReport
 │   ├── JSONreport
 └── .env                                    # Follow the 3th & 4th steps to create the file.
-└── .travis.json                            # Travis CI/CD Config file.
 └── nightwatch.conf.json                    # Nightwatch config file.
 └── package.json                            # Config main Dependencies.
 └── report-generator.js                     # HTML Visual report config file.
@@ -82,6 +81,38 @@
 9. To run the API tests use the next command:
 
    `npm run test-api`
+
+## Slack Notifications: Integration
+
+9. To run the tests with notifications eneable use the next command:
+
+   `npm install --save-dev nightwatch-slack-reporter`
+
+Options
+-------
+
+You can configure Slack reporter options in [test globals] or [configuration file].
+
+```js
+options = {
+  slack_message: function(results, options) { // function or message string
+    return {
+      text: 'Test completed, passed ' + results.passed + ', failed ' + results.failed,
+      username: 'Nightwatch',
+      icon_emoji: ':ghost:'
+    } // Message payload or string
+  },
+  slack_webhook_url: 'https://hooks.slack.com/services/...'
+  // This can be specified with SLACK_WEBHOOK_URL environment variable
+}
+```
+
+Author
+------
+
+[Carlos Cervantes]
+
+
 
 ## Dependencies:
 
