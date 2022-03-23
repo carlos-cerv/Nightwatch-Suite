@@ -43,14 +43,19 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'chrome'
+        browserName : 'firefox',
+        'moz:firefoxOptions': {
+          args: [
+            '-headless',
+            '-verbose'
+          ]
+        }
       },
 
       webdriver: {
         start_process: true,
         server_path: '',
         }
-      
     },
 
     
@@ -105,11 +110,11 @@ module.exports = {
       // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
         start_process: true,
-        port: 9515,
+        port: 4444,
         host: 'localhost',
         server_path: (Services.seleniumServer ? Services.seleniumServer.path : ''),
         cli_args: {
-          'webdriver.gecko.driver': (Services.geckodriver ? Services.geckodriver.path : ''),
+          'webdriver.gecko.driver': (Services.geckodriver ? Services.geckodriver.path : 'node_modules/geckodriver/bin/geckodriver'),
           'webdriver.chrome.driver': (Services.chromedriver ? Services.chromedriver.path : '')
         }
       }
