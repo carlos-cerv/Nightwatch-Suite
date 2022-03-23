@@ -16,8 +16,9 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
       - uses: browser-actions/setup-firefox@latest
 
+      - run: npm ci
       - run: npm install
+      - run: npm install selenium-webdriver@latest
       - run: npm install geckodriver@latest
       - run: npm install chromedriver@latest
-      - run: npm ci
       - run: npm run Test:Login
