@@ -64,8 +64,6 @@ module.exports = function (browser) {
         this.logOutFunction = async () => {
             await mainPage.click('@userOptn')
             await mainPage.click('@logOut')
-            await mainPage.assert.visible('@logoTodoist')
-            await mainPage.assert.visible('@loginButton')
         };
 
      return this;
