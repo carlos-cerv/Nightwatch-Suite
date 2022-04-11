@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Results - Example Test Report FIREFOX 91.0.2 20.6.0 </title>
+
+  <style>
+    html, body {
+      font-family: Arial,sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { padding: 10px 40px; }
+
+    table { width: 100%; margin-bottom: 20px; }
+
+      td {
+        padding: 7px;
+        border-top: none;
+        border-left: 1px black solid;
+        border-bottom: 1px black solid;
+        border-right: none;
+      }
+
+      td.pass { color: #003b07; background: #86e191; }
+      td.skip { color: #7d3a00; background: #ffd24a; }
+      td.fail { color: #5e0e00; background: #ff9c8a; }
+
+    tr:last-child       { border-top: 1px black solid; }
+      tr:last-child td    { border-top: 1px black solid; }
+      tr:first-child td   { border-top: 1px black solid; }
+        td:last-child       { border-right: 1px black solid; }
+
+    tr.overview td      { padding-bottom: 0px; border-bottom: none; }
+    tr.overview.last td { padding-bottom: 3px; }
+
+    ul.assertions   { list-style-type: none; }
+      span.error      { color: #AD2B2B; }
+      span.success    { color: #53891E; }
+
+    .stacktrace { display: inline; }
+      .stacktrace code { display: none; }
+
+    #nightwatch-logo {
+      position: absolute;
+      top: 20px;
+      right: 33px;
+      width: 70px;
+      height: 75px;
+      background: transparent url('http://nightwatchjs.org/img/logo-nightwatch.png') no-repeat;
+      background-size: 70px 75px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Test Results: Executive Succession & Development</h1>
+  <h2>Section: </h2>
+  <h3>Quality Assurance Team : Carlos Eduardo Cervantes Arteaga</h3>
+
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr class="overview">
+      <td colspan="3" title="FIREFOX 91.0.2 20.6.0 "><strong>Browser:</strong> FIREFOX 91.0.2 20.6.0 </td>
+    </tr>
+    <tr class="overview">
+      <td colspan="3"><strong>Timestamp:</strong> Thu Sep 02 2021 15:53:03 GMT-0500 (Central Daylight Time)</td>
+    </tr>
+    <tr class="overview last">
+      <td colspan="3"><strong>Tests:</strong> 0<br></td>
+    </tr>
+    <tr>
+      <td class="pass"><strong>7</strong> passed</td>
+      <td class="skip"><strong>0</strong> errors</td>
+      <td class="fail"><strong>0</strong> failures</td>
+    </tr>
+  </table>
+  <h3>Test Description:</h3>
+  <p>Description Test: Validate Login access with vaild and invaild user</p>
+  <h3>Test Name:</h3>
+  
+      <h2>testLogin.spec</h2>
+      
+        <h3>Login: Login Standar User</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@password]&gt;[0m is visible [0;90m(34ms)[0m
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@username]&gt;[0m is visible [0;90m(47ms)[0m
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@loginbutton]&gt;[0m is visible [0;90m(22ms)[0m
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>3</strong></span> assertions passed. (0.1020s)
+        </p>
+        <h3>Login: Invalid user validation</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@errorLoginText]&gt;[0m is visible [0;90m(9ms)[0m
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@errorLoginText]&gt;[0m contains text [0;33m&#x27;Epic sadface: Username and password do not match any user in this service&#x27;[0m [0;90m(20ms)[0m
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>2</strong></span> assertions passed. (0.8070s)
+        </p>
+        <h3>Login: Validate Standar User Access</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@mainPageView]&gt;[0m is visible [0;90m(10ms)[0m
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element [0;33m&lt;Element [name&#x3D;@mainPageView]&gt;[0m contains text [0;33m&#x27;Sauce Labs Backpack&#x27;[0m [0;90m(10ms)[0m
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>2</strong></span> assertions passed. (0.7780s)
+        </p>
+
+
+      <hr>
+  
+
+  <div id="nightwatch-logo"></div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+  $(function() {
+    $('div.stacktrace').on('click', 'a', function(evt) {
+      evt.preventDefault();
+
+      var $link = $(this);
+      var $code = $link.parent().find('code');
+
+      $code.is(':visible') ? $link.text('hide stacktrace'):
+                             $link.text('view stacktrace');
+
+      $code.toggle();
+    });
+  });
+  </script>
+  </body>
+<footer>
+  <center>
+    <h2>Quality Assurance</h2>
+    <p>Approved by: Software QA Engineer</p>
+    <p>Carlos Eduardo Cervantes Arteaga</p>
+  </center>
+</footer>
+</html>
