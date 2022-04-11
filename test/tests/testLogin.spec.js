@@ -10,17 +10,17 @@ module.exports = {
   },
   //LOGIN PAGE VALIDATE
   'Login: Login Standar User': async (browser) =>{
-    await login(browser).validatePage();
-  },
-  //INVALID CREDENTIALS
-  'Login: Invalid user validation': async (browser) =>{
-    await login(browser).invalidUser();
-  },
-  //NORMAL USER 
-  'Login: Validate Standar User Access': async (browser) =>{
     await login(browser).loginUser();
+   },
+  //LOG OUT SUCCESFULLY
+  'Log Out: Log out from Standar User': async (browser) =>{
+    await login(browser).logOutFunction();
+   },
   
-  },
+   //LOGIN WITH INVALID USER
+   'Login: Login Invalid User': async (browser) =>{
+    await login(browser).loginInvalidUser();
+   },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{
     await envstage(browser).closeBrowser();

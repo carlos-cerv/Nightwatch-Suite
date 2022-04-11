@@ -1,14 +1,20 @@
 module.exports = {
   
     elements: {
-        //LOGIN PAGE ELEMENTS
-        logoSwagLabs: { locateStrategy: 'xpath', selector: '//body/div[@id="root"]/div[1]/div[1]'},
 
-        username: { locateStrategy: 'xpath', selector: '//input[@id="user-name"]'},
+        //LOGIN FORM
+        email: { locateStrategy: 'xpath', selector: '//input[@id="email"]'},
         password: { locateStrategy: 'xpath', selector: '//input[@id="password"]'},
-        loginbutton: { locateStrategy: 'xpath', selector: '//input[@id="login-button"]'},
-        mainPageView: {locateStrategy:'xpath', selector:"//a[@id='item_4_title_link']"},
+        loginbutton: { locateStrategy: 'xpath', selector: '//button[contains(text(),"Log in")]'},
+        keepLogIn: { locateStrategy: 'xpath', selector: '//input[@id="permanent_login"]'},
 
-        errorLoginText: {locateStrategy:'xpath', selector:"//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[3]"}
+        //ACCESS TYPE
+        googleAccess: {locateStrategy:'xpath', selector:"//body/main[1]/div[1]/div[2]/div[1]/a[1]"},
+        facebookAccess: {locateStrategy:'xpath', selector:"//body/main[1]/div[1]/div[2]/div[1]/a[2]"},
+        appleAccess: {locateStrategy:'xpath', selector:"//body/main[1]/div[1]/div[2]/div[1]/a[3]"},
+       
+        //VALIDATIONS
+        errorLoginText: {locateStrategy:'xpath', selector:"//span[contains(text(),'Invalid email address.')]"}
+
     }
-}
+} 
