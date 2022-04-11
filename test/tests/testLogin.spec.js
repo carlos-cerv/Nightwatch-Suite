@@ -19,7 +19,7 @@ module.exports = {
   //NORMAL USER 
   'Login: Validate Standar User Access': async (browser) =>{
     await login(browser).loginUser();
-    //await login(browser).loginSuccess();
+  
   },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{
