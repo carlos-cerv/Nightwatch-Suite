@@ -3,49 +3,66 @@ const dataTest = require('../data/testData.json');
                                  
 module.exports = function (browser) {
     const loginPage = browser.page.loginPage();
-        //USE FUNCTIONS
+    const mainPage = browser.page.mainPage();
+    
         this.loginUser = async () => {
-            await loginPage.click('@username')
-            await loginPage.setValue('@username', usersTest.userName[0])
+            await this.validateMainPage()
+            await mainPage.click('@loginButton')
+            await loginPage.click('@email')
+            await loginPage.setValue('@email', usersTest.email[0])
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
+            await mainPage.assert.visible('@homeBtnApp')
         };
-        //SUCCESS LOGIN
-        this.loginSuccess = async () =>{
-            await loginPage.assert.visible('@mainPageView')
-            await loginPage.assert.textContains('@mainPageView',dataTest.ProductsText)
-        };
-        //INVALID USER VALIDATION
+
+        this.validateMainPage = async () => {
+            await mainPage.assert.visible('@logoTodoist')
+            await mainPage.assert.visible('@loginButton')
+        }
+
         this.invalidUser = async () => {
-            await loginPage.click('@username')
-            await loginPage.setValue('@username', usersTest.invalidUser)
+            await loginPage.assert.visible('@errorLoginText')
+            await loginPage.verify.containsText('@errorLoginText',dataTest.WrongUserText)
+        }
+
+        this.setCredentials = async () => {
+            await mainPage.click('@loginButton')
+            await loginPage.click('@email')
+            await loginPage.setValue('@email', usersTest.invalidUser)
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
-            await loginPage.assert.visible('@errorLoginText')
-            await loginPage.assert.textContains('@errorLoginText', dataTest.WrongUserText)
+        }
+        
+        //INVALID USER VALIDATION
+        this.loginInvalidUser = async () => {
+            await this.setCredentials()
+            await this.invalidUser()
             await this.clearFields()
         };
+
         //VALIDATE LOGIN FORM 
-        this.validatePage = async ()  => {
-            await loginPage.assert.visible('@username')
+        this.validateLoginPage = async ()  => {
+            await loginPage.assert.visible('@email')
             await loginPage.assert.visible('@password')
             await loginPage.assert.visible('@loginbutton')
+            await loginPage.assert.visible('@googleAccess')
+            await loginPage.assert.visible('@facebookAccess')
+            await loginPage.assert.visible('@appleAccess')
         };
-        //CLEAR FIELDS
+
+        //CLEAR FIELDS IN LOGIN PAGE
         this.clearFields = async () => {
-            await loginPage.clearValue('@username')
+            await loginPage.clearValue('@email')
             await loginPage.clearValue('@password')
         };
+
         //LOG OUT 
         this.logOutFunction = async () => {
-            await loginPage.click('@')
-            await loginPage.click('@')
+            await mainPage.click('@userOptn')
+            await mainPage.click('@logOut')
         };
-        this.sortItems = async () => {
-            await loginPage.assert.visible('@username')
-            await loginPage.assert.visible('@password')
-        };
+
      return this;
     };

@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "Test:Login": "nightwatch test/tests/testLogin.spec.js",
+    "Test:Login": "nightwatch test/tests/testLogin.spec.js --reporter html-reporter/config/html-reporter/html-reporter.js",
     "Test:mainPage": "nightwatch test/tests/testMainPage.spec.js"
   },
   "keywords": [],
   "author": "Carlos Cervantes",
   "license": "",
   "dependencies": {
+    "fs": "0.0.1-security",
+    "handlebars": "^4.7.7",
+    "nightwatch-html-reporter": "^2.0.6",
     "path": "^0.12.7"
   },
   "devDependencies": {
@@ -17,6 +20,7 @@
     "dotenv": "^16.0.0",
     "geckodriver": "^3.0.1",
     "nightwatch": "^2.0.10",
+    "nightwatch-slack-reporter": "0.0.2",
     "selenium-webdriver": "^4.1.1"
   }
 }
