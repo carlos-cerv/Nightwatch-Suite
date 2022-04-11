@@ -6,7 +6,7 @@ module.exports = function (browser) {
     const mainPage = browser.page.mainPage();
 
         this.goToLoginPage = async () => {
-        await mainPage.click('@loginButton')
+            await mainPage.click('@loginButton')
         };
     
         this.loginUser = async () => {
