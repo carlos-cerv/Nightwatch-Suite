@@ -4,10 +4,12 @@ const dataTest = require('../data/testData.json');
 module.exports = function (browser) {
     const loginPage = browser.page.loginPage();
     const mainPage = browser.page.mainPage();
+
+        this.goToLoginPage = async () => {
+        await mainPage.click('@loginButton')
+        };
     
         this.loginUser = async () => {
-            await this.validateMainPage()
-            await mainPage.click('@loginButton')
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
             await loginPage.click('@password')
@@ -62,6 +64,8 @@ module.exports = function (browser) {
         this.logOutFunction = async () => {
             await mainPage.click('@userOptn')
             await mainPage.click('@logOut')
+            await mainPage.assert.visible('@logoTodoist')
+            await mainPage.assert.visible('@loginButton')
         };
 
      return this;

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "Test:Login": "nightwatch test/tests/testLogin.spec.js --reporter html-reporter/config/html-reporter/html-reporter.js",
+    "Test:Login": "nightwatch test/tests/testLogin.spec.js",
     "Test:mainPage": "nightwatch test/tests/testMainPage.spec.js"
   },
   "keywords": [],
