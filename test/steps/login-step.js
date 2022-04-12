@@ -29,7 +29,6 @@ module.exports = function (browser) {
         }
 
         this.setCredentials = async () => {
-            await mainPage.click('@loginButton')
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.invalidUser)
             await loginPage.click('@password')

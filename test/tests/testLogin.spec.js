@@ -20,6 +20,7 @@ module.exports = {
    },
   //LOGIN WITH INVALID USER
    'Login: Login Invalid User': async (browser) =>{
+    await login(browser).goToLoginPage();
     await login(browser).loginInvalidUser();
    },
   //LOGIN PAGE VALIDATE
