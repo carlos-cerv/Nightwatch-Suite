@@ -8,24 +8,24 @@ module.exports = {
   before: async (browser) => {
     await envstage(browser).openBrowser();
   },
+  //GO TO LOGIN PAGE
+  'Go to Login: Navigate to Login Page': async (browser) =>{
+    await login(browser).mainPageDisplayed();
+    await login(browser).goToLoginPage();
+   },
   //LOGIN PAGE VALIDATE
   'Login: Login Standar User': async (browser) =>{
-    await login(browser).validateMainPage();
-    await login(browser).goToLoginPage();
-    await login(browser).loginUser();
+    await login(browser).loginPageDisplayed();
+    await login(browser).setLoginUser();
    },
+  //VALIDATE LOGIN STANDAR USER
+  'Login: Standar User Access Success': async (browser) =>{
+    await login(browser).successLogin();
+  },
   //LOG OUT SUCCESFULLY
   'Log Out: Log out from Standar User': async (browser) =>{
     await login(browser).logOutFunction();
-   },
-  //LOGIN WITH INVALID USER
-   'Login: Login Invalid User': async (browser) =>{
-    await login(browser).goToLoginPage();
-    await login(browser).loginInvalidUser();
-   },
-  //LOGIN PAGE VALIDATE
-  'Login: Login Standar User 1st Test case': async (browser) =>{
-    await login(browser).loginUser();
+    await login(browser).mainPageDisplayed();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{

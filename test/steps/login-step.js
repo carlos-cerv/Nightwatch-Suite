@@ -9,33 +9,41 @@ module.exports = function (browser) {
             await mainPage.click('@loginButton')
         };
     
-        this.loginUser = async () => {
+        //LOGIN STEP GENERAL
+        this.setLoginUser = async () => {
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
-            await mainPage.assert.visible('@homeBtnApp')
         };
 
-        this.validateMainPage = async () => {
-            await mainPage.assert.visible('@logoTodoist')
-            await mainPage.assert.visible('@loginButton')
-        }
-
-        this.invalidUser = async () => {
-            await loginPage.assert.visible('@errorLoginText')
-            await loginPage.verify.containsText('@errorLoginText',dataTest.WrongUserText)
-        }
-
-        this.setCredentials = async () => {
+        this.setInvalidUser = async () => {
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.invalidUser)
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
-        }
-        
+        };
+
+        //VALIDATIONS SUCCESS
+        this.successLogin = async () => {
+            await mainPage.assert.visible('@homeBtnApp')
+        };
+
+        //VALIDATE MAIN PAGE VIEW ACCESS
+        this.mainPageDisplayed = async () => {
+            //await mainPage.waitForElementVisible('@logoTodoist')
+            await mainPage.assert.visible('@logoTodoist')
+            await mainPage.assert.visible('@loginButton')
+        };
+
+        //VALIDATE INVALID USER BY EMAIL
+        this.invalidUser = async () => {
+            await loginPage.assert.visible('@errorLoginText')
+            await loginPage.assert.containsText('@errorLoginText',dataTest.EmailWrongText)
+        };
+
         //INVALID USER VALIDATION
         this.loginInvalidUser = async () => {
             await this.setCredentials()
@@ -44,7 +52,7 @@ module.exports = function (browser) {
         };
 
         //VALIDATE LOGIN FORM 
-        this.validateLoginPage = async ()  => {
+        this.loginPageDisplayed = async ()  => {
             await loginPage.assert.visible('@email')
             await loginPage.assert.visible('@password')
             await loginPage.assert.visible('@loginbutton')
