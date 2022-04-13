@@ -33,9 +33,9 @@ module.exports = {
   //LOG OUT SUCCESS
   'Log Out: Log out from Standar User Success': async (browser) =>{
     await login(browser).mainPageDisplayed();
-   },
+   },*/
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{
     await envstage(browser).closeBrowser();
-  }*/
+  }
 };
