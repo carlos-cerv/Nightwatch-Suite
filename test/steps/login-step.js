@@ -5,11 +5,12 @@ module.exports = function (browser) {
     const loginPage = browser.page.loginPage();
     const mainPage = browser.page.mainPage();
 
+        //NAVIGATE TO LOGIN PAGE
         this.goToLoginPage = async () => {
             await mainPage.click('@loginButton')
         };
     
-        //LOGIN STEP GENERAL
+        //LOGIN STANDAR USER
         this.setLoginUser = async () => {
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
@@ -18,6 +19,7 @@ module.exports = function (browser) {
             await loginPage.click('@loginbutton')
         };
 
+        //LOGIN INVALID EMAIL
         this.setInvalidUser = async () => {
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.invalidUser)
@@ -51,6 +53,12 @@ module.exports = function (browser) {
             await this.clearFields()
         };
 
+        //CLEAR FIELDS IN LOGIN PAGE
+        this.clearFields = async () => {
+            await loginPage.clearValue('@email')
+            await loginPage.clearValue('@password')
+        };
+
         //VALIDATE LOGIN FORM 
         this.loginPageDisplayed = async ()  => {
             await loginPage.assert.visible('@email')
@@ -59,12 +67,6 @@ module.exports = function (browser) {
             await loginPage.assert.visible('@googleAccess')
             await loginPage.assert.visible('@facebookAccess')
             await loginPage.assert.visible('@appleAccess')
-        };
-
-        //CLEAR FIELDS IN LOGIN PAGE
-        this.clearFields = async () => {
-            await loginPage.clearValue('@email')
-            await loginPage.clearValue('@password')
         };
 
         //NAVIGATE TO LOGOUT FUNCTION

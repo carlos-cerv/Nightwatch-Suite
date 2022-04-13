@@ -22,13 +22,17 @@ module.exports = {
   'Login: Standar User Access Success': async (browser) =>{
     await login(browser).successLogin();
   },
-  //LOG OUT SUCCESFULLY
+  //LOG OUT NAVIGATION
   'Log Out: Navigate to Log Out Option': async (browser) =>{
     await login(browser).goToLogOut();
    },
-  //LOG OUT SUCCESFULLY
-  'Log Out: Log out from Standar User': async (browser) =>{
+  //LOG OUT
+  'Log Out: Log out from Standar User flow': async (browser) =>{
     await login(browser).logOut();
+   },
+  //LOG OUT SUCCESS
+  'Log Out: Log out from Standar User Success': async (browser) =>{
+    await login(browser).mainPageDisplayed();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{
