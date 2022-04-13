@@ -23,8 +23,12 @@ module.exports = {
     await login(browser).successLogin();
   },
   //LOG OUT SUCCESFULLY
+  'Log Out: Navigate to Log Out Option': async (browser) =>{
+    await login(browser).goToLogOut();
+   },
+  //LOG OUT SUCCESFULLY
   'Log Out: Log out from Standar User': async (browser) =>{
-    await login(browser).logOutFunction();
+    await login(browser).logOut();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{

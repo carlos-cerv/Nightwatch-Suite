@@ -67,10 +67,16 @@ module.exports = function (browser) {
             await loginPage.clearValue('@password')
         };
 
-        //LOG OUT 
-        this.logOutFunction = async () => {
+        //NAVIGATE TO LOGOUT FUNCTION
+        this.goToLogOut = async () => {
             await mainPage.assert.visible('@userOptn')
+            await mainPage.verify.visible('@userOptn')
             await mainPage.click('@userOptn')
+        }
+
+        //LOG OUT 
+        this.logOut = async () => {
+            await mainPage.assert.visible('@logOut')
             await mainPage.click('@logOut')
         };
 

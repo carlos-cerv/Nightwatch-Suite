@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="4">
+            tests="5">
 
   <testsuite name="tests.testLogin.spec"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="4" time="10.77" timestamp="">
+    tests="5" time="10.80" timestamp="">
   
-    <testcase name="Go to Login: Navigate to Login Page" classname="tests.testLogin.spec" time="0.4240" assertions="2">
+    <testcase name="Go to Login: Navigate to Login Page" classname="tests.testLogin.spec" time="0.4050" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Login: Login Standar User" classname="tests.testLogin.spec" time="4.791" assertions="6">
+    <testcase name="Login: Login Standar User" classname="tests.testLogin.spec" time="4.742" assertions="6">
 
     
 
@@ -29,12 +29,19 @@
     
     </testcase>
   
-    <testcase name="Login: Standar User Access Success" classname="tests.testLogin.spec" time="2.092" assertions="1">
+    <testcase name="Login: Standar User Access Success" classname="tests.testLogin.spec" time="2.200" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Log Out: Log out from Standar User" classname="tests.testLogin.spec" time="3.466" assertions="1">
+    <testcase name="Log Out: Navigate to Log Out Option" classname="tests.testLogin.spec" time="1.031" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Log Out: Log out from Standar User" classname="tests.testLogin.spec" time="2.424" assertions="1">
 
     
     </testcase>
