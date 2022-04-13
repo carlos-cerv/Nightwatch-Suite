@@ -25,7 +25,6 @@ module.exports = {
   //LOG OUT SUCCESFULLY
   'Log Out: Log out from Standar User': async (browser) =>{
     await login(browser).logOutFunction();
-    await login(browser).mainPageDisplayed();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{
