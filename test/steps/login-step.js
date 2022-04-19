@@ -5,7 +5,7 @@ module.exports = function (browser) {
     const loginPage = browser.page.loginPage();
     const mainPage = browser.page.mainPage();
 
-        //NAVIGATE TO LOGIN PAGE
+        //NAVIGATE TO LOGIN PA
         this.goToLoginPage = async () => {
             await mainPage.click('@loginButton')
         };
