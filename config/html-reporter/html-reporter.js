@@ -12,7 +12,7 @@ module.exports = {
     var reportFilePath = path.join(__dirname, '/Reports/',reportFilename);
     
     // read the html template
-    fs.readFile('html-reporter/config/html-reporter.hbs', function(err, data) {
+    fs.readFile('config/html-reporter.hbs', function(err, data) {
       if (err) throw err;
 
       var template = data.toString();
