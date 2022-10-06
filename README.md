@@ -110,7 +110,7 @@ options = {
 Author
 ------
 
-[Carlos Cervantes]
+[Carlos Eduardo Cervantes Arteaga]
 
 
 
