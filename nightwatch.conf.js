@@ -46,7 +46,7 @@ module.exports = {
         browserName : 'firefox',
         'moz:firefoxOptions': {
           args: [
-            '-headless',
+            // '-headless',
             '-verbose'
           ]
         }
@@ -67,7 +67,7 @@ module.exports = {
           acceptInsecureCerts: true,
           'moz:firefoxOptions': {
             args: [
-              '-headless',
+              // '-headless',
               '-verbose'
             ]
           }
@@ -78,7 +78,7 @@ module.exports = {
         server_path: '',
         cli_args: [
           // very verbose geckodriver logs
-          '-headless',
+          // '-headless',
           '-vv'
         ]
       }
@@ -96,7 +96,7 @@ module.exports = {
             '--no-sandbox',
             '--ignore-certificate-errors',
             '--allow-insecure-localhost',
-            '--headless'
+            // '--headless'
           ]
         }
       }

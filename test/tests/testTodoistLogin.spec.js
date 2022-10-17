@@ -12,6 +12,9 @@ module.exports = {
   '001_TODOIST_USER_LOGIN_SUCCESS': async (browser) =>{
     await login(browser).mainPageDisplayed();
     await login(browser).goToLoginPage();
+    await login(browser).loginPageDisplayed();
+    await login(browser).setLoginUser();
+    await login(browser).successLogin();
    },
   //LOGIN PAGE VALIDATE
   'Login: Login Standar User': async (browser) =>{

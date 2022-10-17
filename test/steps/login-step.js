@@ -12,8 +12,12 @@ module.exports = function (browser) {
     
         //LOGIN STANDAR USER
         this.setLoginUser = async () => {
+            await loginPage.waitForElementVisible('@email')
+            await loginPage.waitForElementVisible('@password')
+            await loginPage.assert.visible('@email')
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
+            await loginPage.assert.visible('@password')
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
@@ -30,12 +34,13 @@ module.exports = function (browser) {
 
         //VALIDATIONS SUCCESS
         this.successLogin = async () => {
+            await mainPage.waitForElementVisible('@homeBtnApp')
             await mainPage.assert.visible('@homeBtnApp')
         };
 
         //VALIDATE MAIN PAGE VIEW ACCESS
         this.mainPageDisplayed = async () => {
-            //await mainPage.waitForElementVisible('@logoTodoist')
+            await mainPage.waitForElementVisible('@logoTodoist')
             await mainPage.assert.visible('@logoTodoist')
             await mainPage.assert.visible('@loginButton')
         };
