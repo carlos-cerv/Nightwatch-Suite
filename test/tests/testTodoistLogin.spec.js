@@ -17,25 +17,12 @@ module.exports = {
     await login(browser).successLogin();
    },
   //LOGIN PAGE VALIDATE
-  'Login: Login Standar User': async (browser) =>{
-    await login(browser).loginPageDisplayed();
-    await login(browser).setLoginUser();
-   },
-  //VALIDATE LOGIN STANDAR USER
-  'Login: Standar User Access Success': async (browser) =>{
-    await login(browser).successLogin();
-  },
-  //LOG OUT NAVIGATION
-  'Log Out: Navigate to Log Out Option': async (browser) =>{
-    await login(browser).goToLogOut();
-   },
-  //LOG OUT
-  'Log Out: Log out from Standar User flow': async (browser) =>{
-    await login(browser).logOut();
-   },
-  //LOG OUT SUCCESS
-  'Log Out: Log out from Standar User Success': async (browser) =>{
+  '002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD': async (browser) =>{
     await login(browser).mainPageDisplayed();
+    await login(browser).goToLoginPage();
+    await login(browser).loginPageDisplayed();
+    await login(browser).setInvalidUser();
+    await login(browser).invalidUser();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{

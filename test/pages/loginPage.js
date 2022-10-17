@@ -14,7 +14,7 @@ module.exports = {
         appleAccess: {locateStrategy:'xpath', selector:"//span[contains(text(),'Continue with Apple')]"},
        
         //VALIDATIONS
-        errorLoginText: {locateStrategy:'xpath', selector:"//span[contains(text(),'Invalid email address.')]"}
+        errorLoginText: {locateStrategy:'xpath', selector:"//div[contains(text(),'Wrong email or password.')]"}
 
     }
 } 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "TESTS:001_TODOIST_USER_LOGIN_SUCCESS": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '001_TODOIST_USER_LOGIN_SUCCESS' --reporter config/html-reporter/html-reporter.js",
-    "Test:mainPage": "nightwatch test/tests/testMainPage.spec.js"
+    "TEST:001_TODOIST_USER_LOGIN_SUCCESS": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '001_TODOIST_USER_LOGIN_SUCCESS' --reporter config/html-reporter/html-reporter.js",
+    "TEST:002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD' --reporter config/html-reporter/html-reporter.js" 
   },
   "keywords": [],
   "author": "Carlos Cervantes",

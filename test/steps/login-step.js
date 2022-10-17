@@ -25,8 +25,12 @@ module.exports = function (browser) {
 
         //LOGIN INVALID EMAIL
         this.setInvalidUser = async () => {
+            await loginPage.waitForElementVisible('@email')
+            await loginPage.waitForElementVisible('@password')
+            await loginPage.assert.visible('@email')
             await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.invalidUser)
+            await loginPage.assert.visible('@password')
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
