@@ -5,6 +5,6 @@
         "problem_user",
         "performance_glitch_user"],
     "password": "Test123.",
-    "invalidUser": "invalid_user",
+    "invalidUser": "invalid_user@mail.com",
     "url": "https://todoist.com/"
 }

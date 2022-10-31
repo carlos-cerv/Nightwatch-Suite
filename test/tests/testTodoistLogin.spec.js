@@ -17,12 +17,11 @@ module.exports = {
     await login(browser).successLogin();
    },
   //LOGIN PAGE VALIDATE
-  '002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD': async (browser) =>{
+  '002_TODOIST_USER_LOGIN_INCORRECT_EMAIL': async (browser) =>{
     await login(browser).mainPageDisplayed();
     await login(browser).goToLoginPage();
     await login(browser).loginPageDisplayed();
     await login(browser).setInvalidUser();
-    await login(browser).invalidUser();
    },
   //FUNCTION CLOSE BROWSER
   after: async (browser) =>{

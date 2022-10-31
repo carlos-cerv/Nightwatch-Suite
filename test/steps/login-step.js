@@ -33,7 +33,11 @@ module.exports = function (browser) {
             await loginPage.assert.visible('@password')
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
+            await loginPage.assert.visible('@loginbutton')
             await loginPage.click('@loginbutton')
+            await loginPage.waitForElementVisible('@errorLoginText',10000)
+            await loginPage.assert.visible('@errorLoginText')
+            await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
         };
 
         //VALIDATIONS SUCCESS

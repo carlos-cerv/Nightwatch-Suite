@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "TEST:001_TODOIST_USER_LOGIN_SUCCESS": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '001_TODOIST_USER_LOGIN_SUCCESS' --reporter config/html-reporter/html-reporter.js",
-    "TEST:002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD' --reporter config/html-reporter/html-reporter.js" 
+    "TEST:002_TODOIST_USER_LOGIN_INCORRECT_EMAIL": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '002_TODOIST_USER_LOGIN_INCORRECT_EMAIL' --reporter config/html-reporter/html-reporter.js" 
   },
   "keywords": [],
   "author": "Carlos Cervantes",
