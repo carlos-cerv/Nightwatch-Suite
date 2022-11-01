@@ -23,7 +23,7 @@ module.exports = function (browser) {
             await loginPage.click('@loginbutton')
         };
 
-        //LOGIN INVALID EMAIL
+        //LOGIN INVALID EMAIL OR USER
         this.setInvalidUser = async () => {
             await loginPage.waitForElementVisible('@email')
             await loginPage.waitForElementVisible('@password')
@@ -33,6 +33,23 @@ module.exports = function (browser) {
             await loginPage.assert.visible('@password')
             await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
+            await loginPage.assert.visible('@loginbutton')
+            await loginPage.click('@loginbutton')
+            await loginPage.waitForElementVisible('@errorLoginText',10000)
+            await loginPage.assert.visible('@errorLoginText')
+            await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
+        };
+
+        //LOGIN INVALID PASSWORD
+        this.setInvalidPassword = async () => {
+            await loginPage.waitForElementVisible('@email')
+            await loginPage.waitForElementVisible('@password')
+            await loginPage.assert.visible('@email')
+            await loginPage.click('@email')
+            await loginPage.setValue('@email', usersTest.email[0])
+            await loginPage.assert.visible('@password')
+            await loginPage.click('@password')
+            await loginPage.setValue('@password', usersTest.invalidPassword)
             await loginPage.assert.visible('@loginbutton')
             await loginPage.click('@loginbutton')
             await loginPage.waitForElementVisible('@errorLoginText',10000)
