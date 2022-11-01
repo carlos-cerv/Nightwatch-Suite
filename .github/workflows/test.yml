@@ -23,3 +23,4 @@ jobs:
       - run: npm ci
       - run: npm run TEST:001_TODOIST_USER_LOGIN_SUCCESS
       - run: npm run TEST:002_TODOIST_USER_LOGIN_INCORRECT_EMAIL
+      - run: npm run TEST:002_TODOIST_USER_LOGIN_INCORRECT_PASSWORD
