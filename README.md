@@ -50,31 +50,27 @@
 
 5. Open the terminal and add the next commands to run the test scripts:
 
-   `npm run Test-all` : run all the test scripts
+   `npm run TEST:001_TODOIST_USER_LOGIN_SUCCESS` : run all the test scripts
 
-   `npm run Test-login` : run the login form test cases
+   `TEST:002_TODOIST_USER_LOGIN_INCORRECT_EMAIL` : run the login form test cases
 
-   `npm run Test-tasks` : run the creation of tasks test cases
-
-   `npm run Test-projects` : run the creation of a project test case
-
-   `npm run Test-suite-smoke` : run the smoke suite
+   `TEST:003_TODOIST_USER_LOGIN_INCORRECT_PASSWORD` : run the creation of tasks test cases
 
 ## Create a Report: Run Test with Report
 
 6. First, run the next command to generate a JSON file with the data provided:
 
-   `npm run Test:Login --reporter html-reporter.js`
+   `npm run TEST:003_TODOIST_USER_LOGIN_INCORRECT_PASSWORD --reporter html-reporter.js`
 
-7. Second, to open the HTML report run the next command. It going to open a browser to shows the statistics:
+7. Second, to open the HTML report run the next command. It going to open a browser to shows the assertions and results:
 
    `npm run Test:Login --reporter html-reporter-statistics.js`
 
 ## Review Code:
 
-8. To analyzes the JavaScript code and quickly find problems, run the next command:
+8. To analyzes the JavaScript code and quickly find problems on libraries, run the next command:
 
-   `npm run Test:Login`
+   `npm fund fix`
 
 ## API Testing:
 
@@ -84,7 +80,7 @@
 
 ## Slack Notifications: Integration
 
-9. To run the tests with notifications eneable use the next command:
+10. To run the tests with notifications eneable use the next command:
 
    `npm install --save-dev nightwatch-slack-reporter`
 
