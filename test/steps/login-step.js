@@ -7,6 +7,7 @@ module.exports = function (browser) {
 
         //NAVIGATE TO LOGIN PA
         this.goToLoginPage = async () => {
+            await mainPage.waitForElementVisible('@loginButton')
             await mainPage.click('@loginButton')
         };
     
@@ -14,11 +15,7 @@ module.exports = function (browser) {
         this.setLoginUser = async () => {
             await loginPage.waitForElementVisible('@email')
             await loginPage.waitForElementVisible('@password')
-            await loginPage.assert.visible('@email')
-            await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
-            await loginPage.assert.visible('@password')
-            await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
             await loginPage.click('@loginbutton')
         };
@@ -27,30 +24,22 @@ module.exports = function (browser) {
         this.setInvalidUser = async () => {
             await loginPage.waitForElementVisible('@email')
             await loginPage.waitForElementVisible('@password')
-            await loginPage.assert.visible('@email')
-            await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.invalidUser)
-            await loginPage.assert.visible('@password')
-            await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.password)
-            await loginPage.assert.visible('@loginbutton')
             await loginPage.click('@loginbutton')
-            await loginPage.waitForElementVisible('@errorLoginText',10000)
-            await loginPage.assert.visible('@errorLoginText')
-            await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
         };
+
+        this.invalidLoginAlert = async () => {
+            await loginPage.waitForElementVisible('@errorLoginText',10000)
+            await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
+        }
 
         //LOGIN INVALID PASSWORD
         this.setInvalidPassword = async () => {
             await loginPage.waitForElementVisible('@email')
             await loginPage.waitForElementVisible('@password')
-            await loginPage.assert.visible('@email')
-            await loginPage.click('@email')
             await loginPage.setValue('@email', usersTest.email[0])
-            await loginPage.assert.visible('@password')
-            await loginPage.click('@password')
             await loginPage.setValue('@password', usersTest.invalidPassword)
-            await loginPage.assert.visible('@loginbutton')
             await loginPage.click('@loginbutton')
             await loginPage.waitForElementVisible('@errorLoginText',10000)
             await loginPage.assert.visible('@errorLoginText')
@@ -59,7 +48,7 @@ module.exports = function (browser) {
 
         //VALIDATIONS SUCCESS
         this.successLogin = async () => {
-            await mainPage.waitForElementVisible('@homeBtnApp')
+            await mainPage.waitForElementVisible('@homeBtnApp',10000)
             await mainPage.assert.visible('@homeBtnApp')
         };
 
