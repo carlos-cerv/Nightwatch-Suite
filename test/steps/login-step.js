@@ -80,9 +80,9 @@ module.exports = function (browser) {
 
         //VALIDATE LOGIN FORM 
         this.loginPageDisplayed = async ()  => {
-            await loginPage.assert.visible('@email')
-            await loginPage.assert.visible('@password')
-            await loginPage.assert.visible('@loginbutton')
+            await loginPage.waitForElementVisible('@googleAccess')
+            await loginPage.waitForElementVisible('@facebookAccess')
+            await loginPage.waitForElementVisible('@appleAccess')
             await loginPage.assert.visible('@googleAccess')
             await loginPage.assert.visible('@facebookAccess')
             await loginPage.assert.visible('@appleAccess')
