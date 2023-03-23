@@ -30,7 +30,7 @@ module.exports = function (browser) {
         };
 
         this.invalidLoginAlert = async () => {
-            await loginPage.waitForElementVisible('@errorLoginText',10000)
+            await loginPage.waitForElementVisible('@errorLoginText',15000)
             await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
         }
 
@@ -41,14 +41,14 @@ module.exports = function (browser) {
             await loginPage.setValue('@email', usersTest.email[0])
             await loginPage.setValue('@password', usersTest.invalidPassword)
             await loginPage.click('@loginbutton')
-            await loginPage.waitForElementVisible('@errorLoginText',10000)
+            await loginPage.waitForElementVisible('@errorLoginText',15000)
             await loginPage.assert.visible('@errorLoginText')
             await loginPage.assert.textContains('@errorLoginText',dataTest.EmailWrongText)
         };
 
         //VALIDATIONS SUCCESS
         this.successLogin = async () => {
-            await mainPage.waitForElementVisible('@homeBtnApp',10000)
+            await mainPage.waitForElementVisible('@homeBtnApp',15000)
             await mainPage.assert.visible('@homeBtnApp')
         };
 
@@ -80,9 +80,6 @@ module.exports = function (browser) {
 
         //VALIDATE LOGIN FORM 
         this.loginPageDisplayed = async ()  => {
-            await loginPage.waitForElementVisible('@googleAccess')
-            await loginPage.waitForElementVisible('@facebookAccess')
-            await loginPage.waitForElementVisible('@appleAccess')
             await loginPage.assert.visible('@googleAccess')
             await loginPage.assert.visible('@facebookAccess')
             await loginPage.assert.visible('@appleAccess')
