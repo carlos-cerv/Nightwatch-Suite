@@ -1,0 +1,21 @@
+name: QA Challenge QA Github Acions with K6
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Nightwatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - uses: browser-actions/setup-chrome@latest
+      - uses: browser-actions/setup-firefox@latest
+
+      - run: npm install
+      - run: npm ci
+      - run: npm run TEST:K6_PERFORMANCE_CHECK
