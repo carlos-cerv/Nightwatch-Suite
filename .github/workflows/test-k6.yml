@@ -18,4 +18,5 @@ jobs:
 
       - run: npm install
       - run: npm ci
+      - run: npm install k6
       - run: npm run TEST:K6_PERFORMANCE_CHECK

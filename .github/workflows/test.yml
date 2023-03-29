@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  Nightwatch:
+  QA_CHALLENGE_UI_REGRESSION:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,3 +24,19 @@ jobs:
       - run: npm run TEST:001_TODOIST_USER_LOGIN_SUCCESS
       - run: npm run TEST:002_TODOIST_USER_LOGIN_INCORRECT_EMAIL
       - run: npm run TEST:003_TODOIST_USER_LOGIN_INCORRECT_PASSWORD
+
+
+  QA_CHALLENGE_REGRESSION_K6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - uses: browser-actions/setup-chrome@latest
+      - uses: browser-actions/setup-firefox@latest
+
+      - run: npm install
+      - run: npm ci
+      - run: npm install k6
+      - run: npm run TEST:K6_PERFORMANCE_CHECK
