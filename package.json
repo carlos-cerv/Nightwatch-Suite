@@ -6,6 +6,8 @@
     "TEST:001_TODOIST_USER_LOGIN_SUCCESS": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '001_TODOIST_USER_LOGIN_SUCCESS' --reporter config/html-reporter/html-reporter.js",
     "TEST:002_TODOIST_USER_LOGIN_INCORRECT_EMAIL": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '002_TODOIST_USER_LOGIN_INCORRECT_EMAIL' --reporter config/html-reporter/html-reporter.js",
     "TEST:003_TODOIST_USER_LOGIN_INCORRECT_PASSWORD": "nightwatch test/tests/testTodoistLogin.spec.js --testcase '003_TODOIST_USER_LOGIN_INCORRECT_PASSWORD' --reporter config/html-reporter/html-reporter.js",
+    "TEST:004_ESCOSIA_MAIN": "nightwatch test/tests/testEscosia.spec.js --reporter config/html-reporter/html-reporter.js",
+    "TEST:005_DUCK_DUCK_GO": "nightwatch test/tests/testDuckDuckGo.js --reporter config/html-reporter/html-reporter.js",
     "TEST:K6_PERFORMANCE_CHECK": "k6 run test/performance/single-request.js"
   },
   "keywords": [],
@@ -23,6 +25,7 @@
     "dotenv": "^16.0.0",
     "geckodriver": "^3.0.1",
     "nightwatch": "^2.0.10",
+    "nightwatch-allure": "^1.2.0",
     "nightwatch-slack-reporter": "0.0.2",
     "selenium-webdriver": "^4.1.1"
   }
