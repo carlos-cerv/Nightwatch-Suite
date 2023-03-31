@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+      - uses: actions/grafana/k6-action
         with:
           node-version: "16.x"
       - uses: browser-actions/setup-chrome@latest
