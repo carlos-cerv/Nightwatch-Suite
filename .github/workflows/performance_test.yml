@@ -1,4 +1,4 @@
-name: QA Challenge QA Github Acions with K6
+name: API Challenge Tests Github Actions
 
 on:
   push:
