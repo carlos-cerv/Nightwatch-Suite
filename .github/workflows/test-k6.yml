@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  Nightwatch:
+  QA_CHALLENGE_API_REGRESSION:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
