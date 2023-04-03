@@ -1,4 +1,4 @@
-name: API Challenge Tests Github Actions
+name: API Challenge Tests with Github Actions
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  QA_CHALLENGE_API_REGRESSION:
+  API_TESTS:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

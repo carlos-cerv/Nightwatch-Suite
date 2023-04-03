@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  QA_CHALLENGE_UI_REGRESSION:
+  LOGIN_UI_TESTS:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
